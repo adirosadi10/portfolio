@@ -1,0 +1,114 @@
+@import "../../global.scss";
+.intro {
+  background-color: white;
+  display: flex;
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+    .imgContainer {
+      width: 800px;
+      height: 800px;
+      background-color: crimson;
+      border-radius: 50%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      float: right;
+      @include mobile {
+        align-items: flex-start;
+      }
+      .img {
+        width: 100%;
+        @include mobile {
+          height: 50%;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 0.5;
+    position: relative;
+    .wrapper {
+      height: 100%;
+      width: 100%;
+      padding-left: 50px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      @include mobile {
+        align-items: center;
+        padding-left: 0;
+      }
+
+      h1 {
+        font-size: 60px;
+        margin: 10px 0;
+        @include mobile {
+          font-size: 40px;
+        }
+      }
+      h2 {
+        font-size: 35px;
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+      h3 {
+        font-size: 30px;
+        span {
+          font-size: inherit;
+          color: crimson;
+        }
+        .ityped-cursor {
+          animation: blink 1s infinite;
+        }
+        @keyframes blink {
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+      .sosmed {
+        display: none;
+        @include mobile {
+          display: block;
+          width: 100%;
+          list-style: none;
+          padding: 0;
+          flex-direction: column;
+          li {
+            width: 100%;
+            cursor: pointer;
+            margin: 20px;
+            display: flex;
+            p {
+              margin-left: 5px;
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 40%;
+      img {
+        width: 30px;
+        animation: arrowBlink 2s infinite;
+      }
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
