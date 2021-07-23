@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import "./Intro.scss"
 import { init } from "ityped"
-import { GitHub, LinkedIn, Email, Call } from '@material-ui/icons';
+import { Email, Call } from '@material-ui/icons';
 
 export default function Intro() {
   const textRef = useRef();
@@ -24,8 +24,6 @@ export default function Intro() {
           <h3>I'm a <span ref={textRef}></span></h3>
 
           <ul className="sosmed">
-            {/* <li><a href="https://github.com/adirosadi10"><GitHub /></a></li>
-            <li><a href="https://www.linkedin.com/in/adi-rosadi/"><LinkedIn /></a></li> */}
             <li className="email">
               < Email />
               <p>adirosadi49@gmail.com</p></li>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./Contact.scss"
-import { GitHub, LinkedIn, Email, Call } from '@material-ui/icons';
+import { GitHub, LinkedIn, } from '@material-ui/icons';
 
 export default function Contact() {
   const [message, setMassage] = useState(false)
@@ -13,7 +13,6 @@ export default function Contact() {
       <div className="wrapper">
 
         <div className="left">
-          {/* <div id="mapid" ></div> */}
           <img src="assets/icons/shake.svg" alt="" />
         </div>
         <div className="right">
